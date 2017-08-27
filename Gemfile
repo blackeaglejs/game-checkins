@@ -36,6 +36,10 @@ gem 'mongoid', '~> 6.1.0'
 # Use devise to manage user authentication. 
 gem 'devise'
 
+# Let's manage money
+gem 'money'
+gem 'monetize'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
