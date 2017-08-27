@@ -1,4 +1,8 @@
 <h1>University of Miami Alumni Association</h1>
 <h2>DC Chapter</h2>
 
-<p align="center"><%= button_to "Sign In", new_user_session_path %></p>
+<% if current_user.blank? %>
+	<%= button_to "Sign In", new_user_session_path %>
+<% else %>
+	<%= button_to "Sign Out", destroy_user_session_path, :method => :delete %>
+<% end %>
