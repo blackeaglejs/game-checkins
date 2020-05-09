@@ -22,6 +22,8 @@ class ChapterMember
 
 	has_one :attendee
 
+	belongs_to :user
+
 	def full_name
 		@full_name = [first_name, last_name].join(" ")
 	end

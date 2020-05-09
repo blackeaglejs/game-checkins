@@ -4,5 +4,9 @@
 <% if current_user.blank? %>
 	<%= button_to "Sign In", new_user_session_path %>
 <% else %>
-	<%= button_to "Sign Out", destroy_user_session_path, :method => :delete %>
+	<% if @chapter_member %>
+		<%= button_to "Sign Out", destroy_user_session_path, :method => :delete %>
+	<% else %>
+		<%= button_to "Create Your Profile", new_chapter_member_path %>
+	<% end %>
 <% end %>
